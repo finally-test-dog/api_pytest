@@ -1,0 +1,28 @@
+pytest testcase/test_one.py 指定文件
+pytest testcase 指定文件夹
+pytest -m 执行特定的测试用例
+pytest -k 执行用例包含“关键字”的用例
+pytest -q 说明：简化控制台的输出
+pytest -v 输出用例更加详细的执行信息
+pytest -s 输出用例中的调试信息
+
+setup/teardown
+模块级 setup_module/teardown_module     开始于模块始末（全局）
+函数级 setup_function/teardown_function 只对函数用例生效（不在类中）
+类级  setup_class/teardown_class        只在类中前后运行一次（在类中）
+方法级 setup_method/teardown_method     开始于方法始末（在类中）
+
+测试用例跳过
+@pytest.mark.skip
+@pytest.mark.skipif
+
+parametrize 参数化
+单参数
+@pytest.mark.parametrize('a',['b','c'])
+def test_parametrize(a):
+    print(a)
+
+多参数
+@pytest.mark.parametrize('a,b',[('b','d'),('c','f')])
+def test_parametrize(a,b):
+    print(a,b)
