@@ -26,3 +26,16 @@ def test_parametrize(a):
 @pytest.mark.parametrize('a,b',[('b','d'),('c','f')])
 def test_parametrize(a,b):
     print(a,b)
+
+allure常用命令：
+1.@allure.epic()                  epic描述
+2.@allure.feature()               模块名称
+3.@allure.story()                 用例名称
+4.@allure.title()                 用例标题
+5.@allure.testcase()              测试用例的连接地址
+6.@allure.issue()                 缺陷地址
+7.@allure.description()           用例描述
+8.@allure.step()                  操作步骤
+9.@allure.severity()              用例等级
+10.@allure.link()                 定义连接
+11.@allure.attachment()           附件

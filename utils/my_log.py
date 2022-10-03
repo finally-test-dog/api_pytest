@@ -43,4 +43,4 @@ logger = Logger().logger
 if __name__ == "__main__":
     logger.info('1')
     logger.error('2')
-    logger.warning('3')
+    logger.warning('5')
